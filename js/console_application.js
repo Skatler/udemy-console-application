@@ -48,3 +48,10 @@ function showMyDb() {
   if (personalMovieDB.privat === false) console.log(personalMovieDB);
 }
 showMyDb();
+
+function writeYourGenre() {
+  for (let i = 1; i <= 3; i += 1) {
+    personalMovieDB.genres[i - 1] = prompt(`Ваш любимый жанр под номером ${i}`);
+  }
+}
+writeYourGenre();
