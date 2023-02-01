@@ -38,10 +38,13 @@ function detectPersonalLevel() {
     console.log('Вы посмотрели довольно мало фильмов');
   } else if (personalMovieDB.count >= 10 && personalMovieDB.count < 30) {
     console.log('Вы классический зритель');
-  } else if (personalMovieDB >= 30) {
+  } else if (personalMovieDB.count >= 30) {
     console.log('Вы киноман');
   }
 }
 detectPersonalLevel();
 
-console.log(personalMovieDB);
+function showMyDb() {
+  if (personalMovieDB.privat === false) console.log(personalMovieDB);
+}
+showMyDb();
